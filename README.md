@@ -1,18 +1,17 @@
-# ferdinandproductconsultancy
-Building my business 
+# Ferdinand Product Consultancy — Website Rebuild
 
-## FPC website rebuild
+Independent Next.js 16 / React 19 website prototype for Ferdinand Product Consultancy, prepared for GoDaddy Node.js Hosting preview via GitHub.
 
-This is the new independent consultancy website, built with Next.js, React and TypeScript.
-
-### Local development
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-### Checks
+Open `http://localhost:3000`.
+
+## Checks
 
 ```bash
 npm run lint
@@ -20,12 +19,13 @@ npx tsc --noEmit
 npm run build
 ```
 
-### Launch checklist
+## Before launch
 
-- Confirm public proof points, client permissions and case studies.
-- Confirm contact email and enquiry process; placeholder `mailto:` actions are not yet launch-ready.
-- Review privacy and analytics before activation.
-- Remove `noindex` only when the new site is approved for public launch.
-- Connect a Vercel preview and review desktop/mobile renders before any domain cutover.
+- Confirm that the public email, telephone number and WhatsApp destination work as expected.
+- Review the supplied founder portrait and brand logo at desktop and mobile sizes.
+- Confirm claims, public case studies, portfolio rights, availability and working geography.
+- Review the privacy and cookie position before enabling analytics.
+- Remove the `noindex` robots setting in `app/layout.tsx` only after approval.
+- Use GoDaddy's linked GitHub preview and verify the rendered site before any publication or DNS/domain change.
 
-The existing live domain and DNS have not been changed.
+The live website and DNS are intentionally untouched.
