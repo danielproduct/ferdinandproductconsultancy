@@ -23,8 +23,7 @@ export default function Home() {
     <>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Ferdinand Product Consultancy home" onClick={close}>
-          <span className="brand-mark">f<span>.</span></span>
-          <span className="brand-name">FERDINAND<span>PRODUCT CONSULTANCY</span></span>
+          <span className="brand-logo"><Image src="/fpc-logo.png" alt="" width={210} height={210} priority /></span>
         </a>
         <nav className={menuOpen ? "navigation navigation-open" : "navigation"} aria-label="Main navigation">
           <a onClick={close} href="#services">Expertise</a>
@@ -82,7 +81,7 @@ export default function Home() {
 
         <section id="contact" className="contact-section section-frame"><div className="contact-orbit" aria-hidden="true"/><span className="section-kicker light">LET'S MAKE SOMETHING HAPPEN</span><h2>Have a challenge<br/>worth <em>solving?</em></h2><p>Whether you're looking for a senior product contractor or need a partner for a defined project, let's start with a conversation.</p><div className="contact-actions"><a className="button button-white" href={`mailto:${contactEmail}?subject=FPC%20enquiry`}><Mail size={19}/> Email Dan <ArrowUpRight size={19}/></a><a className="button button-outline" href={whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle size={19}/> WhatsApp <ArrowUpRight size={19}/></a></div><div className="contact-details"><a href={`mailto:${contactEmail}`}>{contactEmail}</a><a href="tel:+447969071670"><Phone size={15}/> 07969 071670</a></div></section>
       </main>
-      <footer className="site-footer section-frame"><a className="brand footer-brand" href="#top"><span className="brand-mark">f<span>.</span></span><span className="brand-name">FERDINAND<span>PRODUCT CONSULTANCY</span></span></a><p>Independent product leadership.<br/>Built around outcomes.</p><div className="footer-end"><span>© {new Date().getFullYear()} Ferdinand Product Consultancy</span><a href="https://www.linkedin.com/company/ferdinand-product-consultancy/" target="_blank" rel="noreferrer">LinkedIn <MoveUpRight size={14}/></a></div></footer>
+      <footer className="site-footer section-frame"><a className="brand footer-brand" href="#top" aria-label="Ferdinand Product Consultancy home"><span className="brand-logo"><Image src="/fpc-logo.png" alt="" width={210} height={210}/></span></a><p>Independent product leadership.<br/>Built around outcomes.</p><div className="footer-end"><span>© {new Date().getFullYear()} Ferdinand Product Consultancy</span><a href="https://www.linkedin.com/company/ferdinand-product-consultancy/" target="_blank" rel="noreferrer">LinkedIn <MoveUpRight size={14}/></a></div></footer>
     </>
   );
 }
