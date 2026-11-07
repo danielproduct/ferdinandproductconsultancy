@@ -12,6 +12,10 @@
 .portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:center 32%;filter:grayscale(100%)}
 .logo-frame{height:106px;background:#0d0b14;overflow:hidden;position:relative}
 .logo-frame img{width:100%;height:100%;object-fit:cover;object-position:center}
+.brand-logo{position:relative;display:block;flex:none;width:210px;height:75px;overflow:hidden}
+.brand-logo img{position:absolute;display:block;max-width:none;width:210px;height:210px;top:-63px;left:0}
+.footer-brand .brand-logo{height:75px}
+@media(max-width:760px){.brand{min-width:0}.brand-logo{width:190px;height:68px}.brand-logo img{width:190px;height:190px;top:-57px}}
 .contact-actions{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
 .button-outline{border:1px solid #d2b8f2;color:#fff;background:rgba(255,255,255,.08)}
 .button-outline:hover{background:rgba(255,255,255,.16)}
