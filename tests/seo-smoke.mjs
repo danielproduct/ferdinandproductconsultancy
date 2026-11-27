@@ -30,7 +30,7 @@ console.log("PASS: Homepage indexing, canonical, sitemap, robots and privacy met
 
 
 const pages = [
-  { route: "services/interim-product-leadership", heading: "Contract & interim", key: "interim-product-leadership" },
+  { route: "services/interim-product-leadership", heading: "interim", key: "interim-product-leadership" },
   { route: "services/product-strategy-consultancy", heading: "Product strategy", key: "product-strategy-consultancy" },
   { route: "experience", heading: "Product experience", key: "experience" },
 ];
