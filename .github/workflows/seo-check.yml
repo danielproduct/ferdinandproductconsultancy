@@ -1,0 +1,30 @@
+name: SEO pre-release QA
+
+on:
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'next.config.ts'
+      - 'package.json'
+      - 'tests/seo-smoke.mjs'
+      - '.github/workflows/seo-check.yml'
+  workflow_dispatch:
+
+jobs:
+  seo-build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Build static export
+        run: npm run build
+      - name: Verify SEO output
+        run: node tests/seo-smoke.mjs
