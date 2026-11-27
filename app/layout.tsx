@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AnalyticsConsent from "./AnalyticsConsent";
+import StructuredData from "./StructuredData";
 import "./globals.css";
 
 const siteUrl = "https://ferdinandproductconsultancy.com";
@@ -14,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en-GB"><body>{children}<AnalyticsConsent /></body></html>;
+  return <html lang="en-GB"><body><StructuredData />{children}<AnalyticsConsent /></body></html>;
 }
