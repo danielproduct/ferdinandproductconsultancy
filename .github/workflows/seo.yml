@@ -1,0 +1,23 @@
+name: SEO static export checks
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  verify-seo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Build static website
+        run: npm run build
+      - name: Check SEO metadata, indexability and crawl files
+        run: node scripts/check-seo.mjs
